@@ -97,11 +97,11 @@ class LinkedList:
         index = self.get_index_by_data(existing_data)
         if index == -1:
             print("Linked list is empty")
-            return
-        if index == -2:
+
+        elif index == -2:
             print(f"{existing_data} does not exist in the linked list")
-            return
-        self.insert_at_index(data, index+1)
+        else:
+            self.insert_at_index(data, index+1)
 
     # Appending of a list
     def append_list(self, list_to_append):
@@ -143,6 +143,7 @@ class LinkedList:
                 i += 1
                 previous_of_node_to_delete = previous_of_node_to_delete.next_node
             previous_of_node_to_delete.next_node = previous_of_node_to_delete.next_node.next_node
+            del previous_of_node_to_delete.next_node
 
     # Deletion by data
     def delete_by_data(self, data):
@@ -151,9 +152,9 @@ class LinkedList:
 
         if index == -1:
             print("Linked list is empty")
-            return
-        if index == -2:
+
+        elif index == -2:
             print(f"{data} does not exist in the linked list")
-            return
+
         else:
             self.delete_by_index(index)
