@@ -154,12 +154,3 @@ class CircularLinkedList:
         else:
             self.delete_by_index(index)
 
-
-cll = CircularLinkedList()
-cll.insert_at_beginning(10)
-cll.insert_at_beginning(20)
-cll.insert_at_beginning(30)
-print(cll.get_all_nodes_data())
-cll.delete_by_data(20)
-print(cll.get_all_nodes_data())
-print("Head data", cll.head.data)
