@@ -142,8 +142,10 @@ class LinkedList:
             while i != (index-1):
                 i += 1
                 previous_of_node_to_delete = previous_of_node_to_delete.next_node
+
+            temp = previous_of_node_to_delete.next_node
             previous_of_node_to_delete.next_node = previous_of_node_to_delete.next_node.next_node
-            del previous_of_node_to_delete.next_node
+            del temp
 
     # Deletion by data
     def delete_by_data(self, data):
